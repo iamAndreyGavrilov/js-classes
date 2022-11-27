@@ -39,3 +39,24 @@ const dog = new Dog({ name: 'Dog', age: 5, hasTail: true, color: 'black' })
 console.log(dog.voice())
 dog.setInfo = 10
 console.log(dog.getInfo)
+class Component {
+  constructor(selector) {
+    this.$el = document.querySelector(selector)
+  }
+  hide(){
+    this.$el.style.display = 'none'
+  }
+  show(){
+    this.$el.style.display = 'block'
+
+  }
+
+}
+
+class Box extends Component {
+  constructor(options) {
+    super();
+  }
+}
+
+const box1 = new Box()
