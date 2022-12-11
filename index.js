@@ -1,62 +1,34 @@
-class Animal {
-  static type = 'ANIMAL'
+// class Car {
+//   constructor(brand, color) {
+//     this.brand = brand
+//     this.color = color
+//   }
+//   start(){
+//     console.log(`${this.brand} - start!`)
+//   }
+//   stop(){
+//     console.log(`${this.brand} - STOP!`)
+//   }
+//
+//   static discount(){
+//     console.log('Скидка 10%!')
+//   }
+//   set rating(value){
+//     this.score = value.toUpperCase()
+//   }
+//
+//   get rating(){
+//     return this.score
+//   }
+// }
+//
+// const tesla = new Car('tesla','silver')
+// const nissan = new Car('nissan','silver')
+//
+// tesla.start()
+// nissan.stop()
+// Car.discount()
+// tesla.rating = 'five'
+//
+// console.log(tesla.rating)
 
-  constructor(payload) {
-    this.name = payload.name
-    this.age = payload.age
-    this.hasTail = payload.hasTail
-  }
-
-  voice() {
-    console.log('I am animal')
-  }
-}
-
-const animal = new Animal({ name: 'Animal', age: 5, hasTail: true })
-
-console.log(animal.voice())
-
-class Dog extends Animal {
-  static type = 'DOG'
-  constructor(payload) {
-    super(  payload  );
-  }
-  voice() {
-    console.log('I am dog')
-  }
-
-  get getInfo(){
-    return this.age * 7
-  }
-
-  set setInfo(newAge){
-    this.age = newAge
-  }
-}
-
-const dog = new Dog({ name: 'Dog', age: 5, hasTail: true, color: 'black' })
-
-console.log(dog.voice())
-dog.setInfo = 10
-console.log(dog.getInfo)
-class Component {
-  constructor(selector) {
-    this.$el = document.querySelector(selector)
-  }
-  hide(){
-    this.$el.style.display = 'none'
-  }
-  show(){
-    this.$el.style.display = 'block'
-
-  }
-
-}
-
-class Box extends Component {
-  constructor(options) {
-    super();
-  }
-}
-
-const box1 = new Box()
